@@ -1,0 +1,59 @@
+{
+  "name": "use-text-analyzer",
+  "version": "1.0.0",
+  "description": "A React hook for analyzing text.",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "esmodule": "dist/index.mjs",
+  "umd:main": "dist/index.umd.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "module": "./dist/index.module.js",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "rm -rf ./dist/*; microbundle build --entry src/index.ts --name use-text-analyzer --tsconfig tsconfig.json",
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Invulner/use-text-analyzer.git"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "react-hook",
+    "text",
+    "analyzer"
+  ],
+  "author": "invulner <invulner91@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Invulner/use-text-analyzer/issues"
+  },
+  "homepage": "https://github.com/Invulner/use-text-analyzer#readme",
+  "devDependencies": {
+    "@testing-library/react-hooks": "^7.0.0",
+    "@types/jest": "^29.5.7",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "jest": "^29.7.0",
+    "microbundle": "^0.15.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}
