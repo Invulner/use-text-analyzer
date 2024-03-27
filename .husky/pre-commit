@@ -2,6 +2,12 @@
 
 yarn run prettier:check ||
 (
-  echo "❌ Prettier Check Failed. You can use 'yarn prettier:fix' ❌ "
+  echo "❌ Prettier check failed. You can use 'yarn prettier:fix' ❌ "
+  false;
+)
+
+yarn run lint:check ||
+(
+  echo "❌ ESLint check failed. You can use 'yarn lint:fix' ❌ ";
   false;
 )
