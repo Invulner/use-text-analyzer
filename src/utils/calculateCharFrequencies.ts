@@ -9,7 +9,7 @@ export function calculateCharFrequencies(text: string, ignoreCase: boolean): Map
 
   const characters = text.replace(/\s+/g, '').split('');
 
-  characters.forEach(char => {
+  characters.forEach((char) => {
     const normalizedChar = ignoreCase ? char.toLowerCase() : char;
     const count = charsMap.get(normalizedChar) || 0;
     charsMap.set(normalizedChar, count + 1);

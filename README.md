@@ -29,7 +29,8 @@ import React from 'react';
 import useTextAnalyzer from 'use-text-analyzer';
 
 function TextAnalyzerExample() {
-  const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+  const text =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
   const searchTerm = 'Lorem';
 
   const {
@@ -52,7 +53,9 @@ function TextAnalyzerExample() {
       <p>Character count: {charCount}</p>
       <p>Sentence count: {sentenceCount}</p>
       <p>Paragraph count: {paragraphCount}</p>
-      <p>Search frequency of '{searchTerm}': {searchFrequency}</p>
+      <p>
+        Search frequency of '{searchTerm}': {searchFrequency}
+      </p>
       <p>Estimated reading time: {readingTime} seconds</p>
       <p>Most frequent word: {mostFrequentWord}</p>
       <p>Least frequent word: {leastFrequentWord}</p>

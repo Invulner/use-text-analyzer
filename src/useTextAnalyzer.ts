@@ -83,7 +83,9 @@ interface TextAnalysisResult {
  */
 function useTextAnalyzer({ text, searchTerm = '', ignoreCase = true }: TextAnalyzerOptions): TextAnalysisResult {
   const processedText = text.trim();
-  const [analysisResult, setAnalysisResult] = useState<TextAnalysisResult>(() => calculateStats(processedText, searchTerm, ignoreCase));
+  const [analysisResult, setAnalysisResult] = useState<TextAnalysisResult>(() =>
+    calculateStats(processedText, searchTerm, ignoreCase),
+  );
 
   useEffect(() => {
     setAnalysisResult(calculateStats(processedText, searchTerm, ignoreCase));

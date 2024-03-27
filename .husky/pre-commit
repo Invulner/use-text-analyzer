@@ -1,0 +1,7 @@
+#!/bin/sh
+
+yarn run prettier:check ||
+(
+  echo "❌ Prettier Check Failed. You can use 'yarn prettier:fix' ❌ "
+  false;
+)
