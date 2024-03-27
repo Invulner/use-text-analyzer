@@ -20,7 +20,7 @@ yarn add use-text-analyzer
 
 - **Lightweight:** Less than 1KB in size, making it lightweight and efficient.
 - **TypeScript Support:** Works seamlessly with both JavaScript and TypeScript projects.
-- **Efficient Algorithms:** Utilizes an O(n) solution for finding the most and least frequent words/characters, instead of the typical O(nlogn) solution via sorting.
+- **Efficient Algorithms:** Utilizes efficient algorithms for finding the most and least frequent words/characters.
 
 ## Usage
 
@@ -76,7 +76,7 @@ A React hook that analyzes the given text and returns various statistics about i
 - `options` (required): An object containing options for text analysis.
   - `text` (string, required): The text to analyze.
   - `searchTerm` (string, optional): The term to search for in the text.
-  - `ignoreCase` (boolean, optional, default: true): Whether to ignore case when searching for the term.
+  - `ignoreCase` (boolean, optional, default: true): Whether to ignore case when searching for the term and calculating word and character frequencies.
 
 #### Returns
 

@@ -13,7 +13,7 @@ interface TextAnalyzerOptions {
    */
   searchTerm?: string;
   /**
-   * Whether to ignore case when searching for the term.
+   * Whether to ignore case when searching for the term and calculating word and character frequencies.
    */
   ignoreCase?: boolean;
 }
@@ -84,7 +84,7 @@ function useTextAnalyzer({ text, searchTerm = '', ignoreCase = true }: TextAnaly
  * Calculates text analysis statistics.
  * @param text - The text to analyze.
  * @param searchTerm - The term to search for.
- * @param ignoreCase - Whether to ignore case when searching for the term.
+ * @param ignoreCase - Whether to ignore case when searching for the term and calculating word and character frequencies.
  * @returns The text analysis statistics.
  */
 function calculateStats(text: string, searchTerm: string, ignoreCase: boolean): TextAnalysisResult {
