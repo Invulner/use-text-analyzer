@@ -7,6 +7,10 @@
 export function calculateWordFrequencies(text: string, ignoreCase: boolean): Map<string, number> {
   const wordsMap = new Map<string, number>();
 
+  if (!text) {
+    return wordsMap;
+  }
+
   // Remove punctuation and split text into words
   const words = text.replace(/[^\w\s]/g, '').split(/\s+/);
 
