@@ -26,8 +26,14 @@ interface TextAnalyzerOptions {
   searchTerm?: string;
   /**
    * Whether to ignore case when searching for the term and calculating word and character frequencies.
+   * @default true
    */
   ignoreCase?: boolean;
+  /**
+   * Whether to trim the text before analysis.
+   * @default true
+   */
+  trimText?: boolean;
 }
 
 /**
@@ -81,8 +87,14 @@ interface TextAnalysisResult {
  * @param {TextAnalyzerOptions} options - Options for text analysis.
  * @returns {TextAnalysisResult} An object containing various statistics about the text.
  */
-function useTextAnalyzer({ text, searchTerm = '', ignoreCase = true }: TextAnalyzerOptions): TextAnalysisResult {
-  const processedText = text.trim();
+function useTextAnalyzer({
+  text,
+  searchTerm = '',
+  ignoreCase = true,
+  trimText = true,
+}: TextAnalyzerOptions): TextAnalysisResult {
+  const processedText = trimText ? text.trim() : text;
+
   const [analysisResult, setAnalysisResult] = useState<TextAnalysisResult>(() =>
     calculateStats(processedText, searchTerm, ignoreCase),
   );

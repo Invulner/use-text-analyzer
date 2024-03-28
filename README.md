@@ -80,6 +80,7 @@ A React hook that analyzes the given text and returns various statistics about i
   - `text` (string, required): The text to analyze.
   - `searchTerm` (string, optional): The term to search for in the text.
   - `ignoreCase` (boolean, optional, default: true): Whether to ignore case when searching for the term and calculating word and character frequencies.
+  - `trimText` (boolean, optional, default: true): Whether to trim the text before analysis.
 
 #### Returns
 
