@@ -118,7 +118,7 @@ function calculateStats(text: string, searchTerm: string, ignoreCase: boolean): 
   const charCount = countCharacters(text);
   const sentenceCount = countSentences(text);
   const paragraphCount = countParagraphs(text);
-  const searchFrequency = searchTerm ? countSearchFrequency(text, searchTerm, ignoreCase) : 0;
+  const searchFrequency = countSearchFrequency(text, searchTerm, ignoreCase);
   const readingTime = estimateReadingTime(wordCount);
   const wordsMap = calculateWordFrequencies(text, ignoreCase);
   const charsMap = calculateCharFrequencies(text, ignoreCase);

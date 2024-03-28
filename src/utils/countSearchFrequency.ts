@@ -6,6 +6,10 @@
  * @returns {number} The frequency of the search term in the text.
  */
 export function countSearchFrequency(text: string, searchTerm: string, ignoreCase: boolean): number {
+  if (!searchTerm) {
+    return 0;
+  }
+
   const regex = new RegExp(escapeRegExp(searchTerm), ignoreCase ? 'gi' : 'g');
   const matches = text.match(regex);
   return matches ? matches.length : 0;
