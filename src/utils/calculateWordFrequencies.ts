@@ -12,7 +12,10 @@ export function calculateWordFrequencies(text: string, ignoreCase: boolean): Map
   }
 
   // Remove punctuation and split text into words
-  const words = text.replace(/[^\w\s]/g, '').split(/\s+/);
+  const words = text
+    .replace(/[^\w\s]/g, '')
+    .split(/\s+/)
+    .filter(Boolean);
 
   words.forEach((word) => {
     const normalizedWord = ignoreCase ? word.toLowerCase() : word;
