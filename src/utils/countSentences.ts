@@ -4,5 +4,8 @@
  * @returns {number} The number of sentences in the text.
  */
 export function countSentences(text: string): number {
-  return text.split(/[.!?]+/).filter(Boolean).length;
+  return text
+    .trim()
+    .split(/[.!?]+/)
+    .filter(Boolean).length;
 }
