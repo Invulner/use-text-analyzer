@@ -4,5 +4,5 @@
  * @returns {number} The number of words in the text.
  */
 export function countWords(text: string): number {
-  return text.split(/\s+/).filter(Boolean).length;
+  return text.split(/[\s\W]+/).filter(Boolean).length;
 }
