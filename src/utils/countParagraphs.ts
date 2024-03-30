@@ -4,5 +4,5 @@
  * @returns {number} The number of paragraphs in the text.
  */
 export function countParagraphs(text: string): number {
-  return text.split(/\n+/).filter(Boolean).length;
+  return text.trim().split(/\n+/).filter(Boolean).length;
 }
