@@ -18,6 +18,18 @@ describe('countSearchFrequency', () => {
       expect(countSearchFrequency('This is a test text.', 'test', true)).toBe(1);
       expect(countSearchFrequency('This is a test test test text.', 'Test', true)).toBe(3);
     });
+
+    it('should return the correct frequency when the search term contains special characters', () => {
+      expect(countSearchFrequency('This is a test text.', '$', true)).toBe(0);
+      expect(countSearchFrequency('This is a test $$$ text.', '$$', true)).toBe(1);
+      expect(countSearchFrequency('This is a test $$$ text.', '$', true)).toBe(3);
+    });
+
+    it('should return the correct frequency when the search term contains emojis', () => {
+      expect(countSearchFrequency('This is a test text.', '😊', true)).toBe(0);
+      expect(countSearchFrequency('This is a test text. 😊😊😊', '😊', true)).toBe(3);
+      expect(countSearchFrequency('This is a test text. 😊😊😊', '😊😊', true)).toBe(1);
+    });
   });
 
   describe('with ignoreCase: false', () => {
@@ -36,6 +48,18 @@ describe('countSearchFrequency', () => {
     it('should return the correct frequency of the search term in the text, ignoring case', () => {
       expect(countSearchFrequency('This is a test text.', 'test', false)).toBe(1);
       expect(countSearchFrequency('This is a test test test text.', 'Test', false)).toBe(0);
+    });
+
+    it('should return the correct frequency when the search term contains special characters', () => {
+      expect(countSearchFrequency('This is a test text.', '$', false)).toBe(0);
+      expect(countSearchFrequency('This is a test $$$ text.', '$$', true)).toBe(1);
+      expect(countSearchFrequency('This is a test $$$ text.', '$', true)).toBe(3);
+    });
+
+    it('should return the correct frequency when the search term contains emojis', () => {
+      expect(countSearchFrequency('This is a test text.', '😊', false)).toBe(0);
+      expect(countSearchFrequency('This is a test text. 😊😊😊', '😊', false)).toBe(3);
+      expect(countSearchFrequency('This is a test text. 😊😊😊', '😊😊', false)).toBe(1);
     });
   });
 });
