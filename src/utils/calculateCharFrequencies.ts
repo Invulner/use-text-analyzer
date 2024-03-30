@@ -7,7 +7,13 @@
 export function calculateCharFrequencies(text: string, ignoreCase: boolean): Map<string, number> {
   const charsMap = new Map<string, number>();
 
-  const characters = text.replace(/\s+/g, '').split('');
+  // Split the text into individual Unicode characters
+  // The spread operator [...text] is used to split the text into an array of individual Unicode characters.
+  // This ensures that each character, including emojis and characters outside the Basic Multilingual Plane (BMP),
+  // is treated as a single element in the array.
+  // The regular expression /\s+/g is used to remove whitespace characters from the text before splitting it.
+  // This ensures that whitespace characters are not counted as separate characters in the result.
+  const characters = [...text.replace(/\s+/g, '')];
 
   characters.forEach((char) => {
     const normalizedChar = ignoreCase ? char.toLowerCase() : char;
