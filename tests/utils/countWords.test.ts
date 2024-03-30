@@ -22,6 +22,7 @@ describe('countWords', () => {
   it('should handle non-alphanumeric characters', () => {
     expect(countWords('This sentence contains special characters! @#$%^&*')).toBe(5);
     expect(countWords('This,sentence.contains:non-alphanumeric?characters!')).toBe(6);
+    expect(countWords('This sentence contains 😊 emojis!')).toBe(4);
   });
 
   it('should handle words containing digits', () => {

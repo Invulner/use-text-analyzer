@@ -12,4 +12,14 @@ describe('countCharacters', () => {
     expect(countCharacters('      ')).toBe(6);
     expect(countCharacters('This sentence contains special characters! @#$%^&*')).toBe(50);
   });
+
+  it('should handle text with newline characters', () => {
+    const text = 'This is a test\nwith\nmultiple\nlines.';
+    expect(countCharacters(text)).toBe(35);
+  });
+
+  it('should handle text with Unicode characters', () => {
+    const text = '😀🚀🌟';
+    expect(countCharacters(text)).toBe(6);
+  });
 });
