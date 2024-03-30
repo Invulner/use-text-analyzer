@@ -1,3 +1,5 @@
+import { splitWords } from './common/splitWords';
+
 /**
  * Calculates word frequencies in the given text.
  * @param {string} text - The text to analyze.
@@ -11,11 +13,7 @@ export function calculateWordFrequencies(text: string, ignoreCase: boolean): Map
     return wordsMap;
   }
 
-  // Remove punctuation and split text into words
-  const words = text
-    .replace(/[^\w\s]/g, '')
-    .split(/\s+/)
-    .filter(Boolean);
+  const words = splitWords(text);
 
   words.forEach((word) => {
     const normalizedWord = ignoreCase ? word.toLowerCase() : word;
