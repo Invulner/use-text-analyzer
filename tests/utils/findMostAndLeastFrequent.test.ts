@@ -13,14 +13,32 @@ describe('findMostAndLeastFrequent', () => {
     map2.set('banana', 2);
     map2.set('orange', 3);
     expect(findMostAndLeastFrequent(map2)).toEqual(['orange', 'apple']);
+  });
 
+  it('should handle empty map', () => {
+    const map = new Map<string, number>();
+    expect(findMostAndLeastFrequent(map)).toEqual(['', '']);
+  });
+
+  it('should handle the scenario where multiple items have equal frequencies', () => {
     const map3 = new Map<string, number>();
     map3.set('apple', 2);
     map3.set('banana', 2);
     map3.set('orange', 2);
     expect(findMostAndLeastFrequent(map3)).toEqual(['apple', 'apple']);
+  });
 
-    const map4 = new Map<string, number>();
-    expect(findMostAndLeastFrequent(map4)).toEqual(['', '']);
+  it('should handle the scenario where there is only one item in the map', () => {
+    const map = new Map<string, number>();
+    map.set('apple', 1);
+    expect(findMostAndLeastFrequent(map)).toEqual(['apple', 'apple']);
+  });
+
+  it('should handle unicode characters', () => {
+    const map = new Map<string, number>();
+    map.set('😀', 3);
+    map.set('🚀', 2);
+    map.set('🌟', 1);
+    expect(findMostAndLeastFrequent(map)).toEqual(['😀', '🌟']);
   });
 });
