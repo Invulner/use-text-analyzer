@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useMemo } from 'react';
 
 import { TextAnalysisResult, TextAnalyzerOptions } from './interfaces';
 import { calculateStats } from './utils/calculateStats';
@@ -16,12 +16,8 @@ function useTextAnalyzer({
 }: TextAnalyzerOptions): TextAnalysisResult {
   const processedText = trimText ? text.trim() : text;
 
-  const [analysisResult, setAnalysisResult] = useState<TextAnalysisResult>(() =>
-    calculateStats(processedText, searchTerm, ignoreCase),
-  );
-
-  useEffect(() => {
-    setAnalysisResult(calculateStats(processedText, searchTerm, ignoreCase));
+  const analysisResult = useMemo(() => {
+    return calculateStats(processedText, searchTerm, ignoreCase);
   }, [processedText, searchTerm, ignoreCase]);
 
   return analysisResult;
