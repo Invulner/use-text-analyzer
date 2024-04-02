@@ -42,6 +42,9 @@
   ],
   "author": "invulner <invulner91@gmail.com>",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "bugs": {
     "url": "https://github.com/Invulner/use-text-analyzer/issues"
   },
