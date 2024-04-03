@@ -1,0 +1,29 @@
+name: Deploy Demo to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Adjust to your primary branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16' # Ensure this matches your project's required Node.js version
+
+      - name: Install dependencies and build the demo
+        run: |
+          cd demo
+          npm install
+          npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages # The branch the action should deploy to
+          folder: demo/build # The folder the action should deploy
