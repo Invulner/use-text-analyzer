@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div>
-      <h2 className="title">Text Analysis Result</h2>
+      <h2 className="title">Text Analyzer Demo</h2>
       <div className="card">
         <textarea
           value={text}
