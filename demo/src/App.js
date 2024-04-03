@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { useTextAnalyzer } from 'useTextAnalyzer';
+import { useTextAnalyzer } from 'use-text-analyzer';
 
 import './App.css';
 
