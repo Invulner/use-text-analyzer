@@ -1,11 +1,17 @@
-# use-text-analyzer 🔍
+<div align="center">
+  <img src="logo.jpg" width="508" alt="use-text-analyzer" />
+</div>
 
-![NPM Version](https://img.shields.io/npm/v/use-text-analyzer)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/use-text-analyzer)
-![GitHub top language](https://img.shields.io/github/languages/top/invulner/use-text-analyzer)
-![GitHub License](https://img.shields.io/github/license/invulner/use-text-analyzer)
+<p align="center">
+  A lightweight React hook for analyzing text and providing various statistics such as word count, character count, search frequency, and more.
+</p>
 
-A lightweight React hook for analyzing text and providing various statistics such as word count, character count, search frequency, and more.
+<div align="center">
+  <img alt="NPM Version" src="https://img.shields.io/npm/v/use-text-analyzer">
+  <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/use-text-analyzer">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/invulner/use-text-analyzer">
+  <img alt="GitHub License" src="https://img.shields.io/github/license/invulner/use-text-analyzer">
+</div>
 
 ## Installation 🛠️
 
