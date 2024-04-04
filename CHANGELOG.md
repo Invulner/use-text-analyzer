@@ -1,3 +1,7 @@
+## 1.1.12
+
+- update `README.md` styling
+
 ## 1.1.11
 
 - use `useMemo` to calculate all stats
