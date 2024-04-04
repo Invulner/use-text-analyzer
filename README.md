@@ -1,8 +1,13 @@
-# use-text-analyzer
+# use-text-analyzer 🔍
+
+![NPM Version](https://img.shields.io/npm/v/use-text-analyzer)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/use-text-analyzer)
+![GitHub top language](https://img.shields.io/github/languages/top/invulner/use-text-analyzer)
+![GitHub License](https://img.shields.io/github/license/invulner/use-text-analyzer)
 
 A lightweight React hook for analyzing text and providing various statistics such as word count, character count, search frequency, and more.
 
-## Installation
+## Installation 🛠️
 
 ### npm
 
@@ -16,13 +21,13 @@ npm install use-text-analyzer
 yarn add use-text-analyzer
 ```
 
-## Features
+## Features ✨
 
-- **Lightweight:** Less than 1KB in size, making it lightweight and efficient.
-- **TypeScript Support:** Works seamlessly with both JavaScript and TypeScript projects.
-- **Efficient Algorithms:** Utilizes efficient algorithms for finding the most and least frequent words/characters.
+- **Lightweight 🪶:** Less than 1KB in size, making it lightweight and efficient.
+- **TypeScript Support 🇹🇸:** Works seamlessly with both JavaScript and TypeScript projects.
+- **Efficient Algorithms ⚡:** Utilizes efficient algorithms for finding the most and least frequent words/characters.
 
-## Usage
+## Usage 📝
 
 ```jsx
 import React from 'react';
@@ -68,7 +73,7 @@ function TextAnalyzerExample() {
 export default TextAnalyzerExample;
 ```
 
-## API
+## API ⚙️
 
 ### `useTextAnalyzer(options: TextAnalyzerOptions): TextAnalysisResult`
 
