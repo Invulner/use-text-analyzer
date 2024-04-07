@@ -37,8 +37,14 @@
     "react",
     "hook",
     "react-hook",
+    "javascript",
+    "typescript",
     "text",
-    "analyzer"
+    "analyzer",
+    "text-analysis",
+    "word-frequency",
+    "wordcount",
+    "reading-time"
   ],
   "author": "invulner <invulner91@gmail.com>",
   "license": "MIT",
