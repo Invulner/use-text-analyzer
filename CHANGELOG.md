@@ -1,3 +1,7 @@
+## 1.1.14
+
+- store default value for reading speed in constants
+
 ## 1.1.13
 
 - update keywords
