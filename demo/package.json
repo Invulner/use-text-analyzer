@@ -10,7 +10,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "use-text-analyzer": "^1.1.11",
+    "use-text-analyzer": "^1.1.14",
     "web-vitals": "^2.1.4f"
   },
   "scripts": {
