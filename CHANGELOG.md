@@ -1,3 +1,7 @@
+## 1.1.15
+
+- fix word splitter to count contractions like "don't" as one word.
+
 ## 1.1.14
 
 - store default value for reading speed in constants
