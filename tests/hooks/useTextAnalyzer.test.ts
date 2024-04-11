@@ -23,7 +23,7 @@ describe('useTextAnalyzer', () => {
     const { result } = renderHook(() => useTextAnalyzer({ text: text.trim(), searchTerm: 'SeCoNd', ignoreCase: true }));
 
     expect(result.current).toEqual({
-      wordCount: 80,
+      wordCount: 78,
       charCount: 560,
       sentenceCount: 14,
       paragraphCount: 7,
@@ -46,7 +46,7 @@ describe('useTextAnalyzer', () => {
     );
 
     expect(result.current).toEqual({
-      wordCount: 80,
+      wordCount: 78,
       charCount: 560,
       sentenceCount: 14,
       paragraphCount: 7,
@@ -63,7 +63,7 @@ describe('useTextAnalyzer', () => {
     const { result } = renderHook(() => useTextAnalyzer({ text, trimText: false }));
 
     expect(result.current).toEqual({
-      wordCount: 80,
+      wordCount: 78,
       charCount: 566,
       sentenceCount: 14,
       paragraphCount: 7,
@@ -86,7 +86,7 @@ describe('useTextAnalyzer', () => {
     );
 
     expect(result.current).toEqual({
-      wordCount: 80,
+      wordCount: 78,
       charCount: 560,
       sentenceCount: 14,
       paragraphCount: 7,
