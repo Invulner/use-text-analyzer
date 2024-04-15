@@ -1,3 +1,17 @@
+## 2.0.0
+
+### Breaking Changes
+
+- **Reading Time Format:** The format of the `readingTime` output in the `useTextAnalyzer` hook has been modified. Previously, `readingTime` was returned as a single integer representing the total number of seconds. Now, it is an object containing detailed aspects of the estimated reading time:
+  - `minutes`: Total estimated reading time expressed in whole minutes.
+  - `seconds`: Remaining seconds beyond the counted minutes.
+  - `total`: Total estimated reading time expressed in seconds.
+  - `text`: Human-readable summary of the reading time.
+
+### Added
+
+- **Custom Reading Speed:** Added a new optional parameter `wordsPerMinute` to the `useTextAnalyzer` hook. This parameter allows users to specify their reading speed, which the hook uses to calculate the estimated reading time. The default value is set to 250 words per minute.
+
 ## 1.1.15
 
 - fix word splitter to count contractions like "don't" as one word.
