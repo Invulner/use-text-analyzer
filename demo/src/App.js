@@ -9,6 +9,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [ignoreCase, setIgnoreCase] = useState(true);
   const [trimText, setTrimText] = useState(true);
+  const [wordsPerMinute, setWordsPerMinute] = useState();
 
   const {
     wordCount,
@@ -21,7 +22,8 @@ function App() {
     leastFrequentWord,
     mostFrequentCharacter,
     leastFrequentCharacter,
-  } = useTextAnalyzer({ text, searchTerm, ignoreCase, trimText });
+  } = useTextAnalyzer({ text, searchTerm, ignoreCase, trimText, wordsPerMinute });
+  console.log(typeof wordsPerMinute)
 
   return (
     <div>
@@ -37,19 +39,36 @@ function App() {
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Enter search term..."
+          placeholder="Enter search term...(optional)"
           className="form-control"
         />
-        <label className="checkbox">
-          Ignore Case:
-          <input type="checkbox" checked={ignoreCase} onChange={(e) => setIgnoreCase(e.target.checked)} />
-        </label>
-        <label className="checkbox">
-          Trim Text:
-          <input type="checkbox" checked={trimText} onChange={(e) => setTrimText(e.target.checked)} />
-        </label>
+        <input
+          type="number"
+          value={wordsPerMinute}
+          onChange={(e) => setWordsPerMinute(e.target.value)}
+          placeholder="Words per minute...(optional, default: 250)"
+          className="form-control"
+        />
+        <div className="flags">
+          <label className="checkbox">
+            Ignore Case:
+            <input type="checkbox" checked={ignoreCase} onChange={(e) => setIgnoreCase(e.target.checked)} />
+          </label>
+          <label className="checkbox">
+            Trim Text:
+            <input type="checkbox" checked={trimText} onChange={(e) => setTrimText(e.target.checked)} />
+          </label>
+        </div>
       </div>
       <div className="card">
+        <p><b>Human-readable reading time:</b> {readingTime.text}</p>
+        <p>
+          <b>Estimated reading time:</b> {readingTime.minutes}m {readingTime.seconds}s
+        </p>
+        <p><b>Total reading time in seconds:</b> {readingTime.total}</p>
+        <p>
+          <b>Search frequency of '{searchTerm}':</b> {searchFrequency}
+        </p>
         <p>
           <b>Word count:</b> {wordCount}
         </p>
@@ -61,12 +80,6 @@ function App() {
         </p>
         <p>
           <b>Paragraph count:</b> {paragraphCount}
-        </p>
-        <p>
-          <b>Search frequency of '{searchTerm}':</b> {searchFrequency}
-        </p>
-        <p>
-          <b>Estimated reading time:</b> {readingTime} seconds
         </p>
         <p>
           <b>Most frequent word:</b> {mostFrequentWord}
