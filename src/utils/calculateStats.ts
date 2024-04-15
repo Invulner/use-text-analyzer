@@ -8,22 +8,25 @@ import { calculateCharFrequencies } from './calculateCharFrequencies';
 import { calculateWordFrequencies } from './calculateWordFrequencies';
 import { findMostAndLeastFrequent } from './findMostAndLeastFrequent';
 
-import { TextAnalysisResult } from '../interfaces';
+import { TextAnalysisResult, TextAnalyzerOptions } from '../interfaces';
 
 /**
- * Calculates text analysis statistics.
- * @param text - The text to analyze.
- * @param searchTerm - The term to search for.
- * @param ignoreCase - Whether to ignore case when searching for the term and calculating word and character frequencies.
- * @returns The text analysis statistics.
+ * Analyzes the given text and returns various statistics about it.
+ * @param {TextAnalyzerOptions} options - Options for text analysis.
+ * @returns {TextAnalysisResult} An object containing various statistics about the text.
  */
-export function calculateStats(text: string, searchTerm: string, ignoreCase: boolean): TextAnalysisResult {
+export function calculateStats({
+  text,
+  searchTerm,
+  ignoreCase,
+  wordsPerMinute,
+}: TextAnalyzerOptions): TextAnalysisResult {
   const wordCount = countWords(text);
   const charCount = countCharacters(text);
   const sentenceCount = countSentences(text);
   const paragraphCount = countParagraphs(text);
   const searchFrequency = countSearchFrequency(text, searchTerm, ignoreCase);
-  const readingTime = estimateReadingTime(wordCount);
+  const readingTime = estimateReadingTime(wordCount, wordsPerMinute);
   const wordsMap = calculateWordFrequencies(text, ignoreCase);
   const charsMap = calculateCharFrequencies(text, ignoreCase);
   const [mostFrequentWord, leastFrequentWord] = findMostAndLeastFrequent(wordsMap);

@@ -44,6 +44,8 @@
     "text-analysis",
     "word-frequency",
     "wordcount",
+    "reading",
+    "time",
     "reading-time"
   ],
   "author": "invulner <invulner91@gmail.com>",
