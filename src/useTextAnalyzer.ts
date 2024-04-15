@@ -17,15 +17,16 @@ function useTextAnalyzer({
   wordsPerMinute = WORDS_PER_MINUTE,
 }: TextAnalyzerOptions): TextAnalysisResult {
   const processedText = trimText ? text.trim() : text;
+  const validWPM = Number(wordsPerMinute) || WORDS_PER_MINUTE;
 
   const analysisResult = useMemo(() => {
     return calculateStats({
       text: processedText,
       searchTerm,
       ignoreCase,
-      wordsPerMinute,
+      wordsPerMinute: validWPM,
     });
-  }, [processedText, searchTerm, ignoreCase, wordsPerMinute]);
+  }, [processedText, searchTerm, ignoreCase, validWPM]);
 
   return analysisResult;
 }
