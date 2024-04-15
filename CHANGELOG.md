@@ -1,3 +1,9 @@
+## 2.0.1
+
+### Fixes
+
+- process cases when `wordsPerMinute` is a string
+
 ## 2.0.0
 
 ### Breaking Changes

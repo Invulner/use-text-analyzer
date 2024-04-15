@@ -118,4 +118,54 @@ describe('useTextAnalyzer', () => {
       leastFrequentCharacter: '!',
     });
   });
+
+  it('should analyze text correctly with searchTerm and when wordsPerMinute is string', () => {
+    const { result } = renderHook(() =>
+      // @ts-expect-error edge case when wordsPerMinute is a string
+      useTextAnalyzer({ text: text.trim(), searchTerm: 'SeCoNd', ignoreCase: true, wordsPerMinute: '250' }),
+    );
+
+    expect(result.current).toEqual({
+      wordCount: 78,
+      charCount: 560,
+      sentenceCount: 14,
+      paragraphCount: 7,
+      searchFrequency: 2,
+      readingTime: {
+        minutes: 0,
+        seconds: 19,
+        total: 19,
+        text: 'less than a minute read',
+      },
+      mostFrequentWord: 'paragraph',
+      leastFrequentWord: 'first',
+      mostFrequentCharacter: 'a',
+      leastFrequentCharacter: '!',
+    });
+  });
+
+  it('should analyze text correctly with searchTerm and when wordsPerMinute is empty string', () => {
+    const { result } = renderHook(() =>
+      // @ts-expect-error edge case when wordsPerMinute is a string
+      useTextAnalyzer({ text: text.trim(), searchTerm: 'SeCoNd', ignoreCase: true, wordsPerMinute: '' }),
+    );
+
+    expect(result.current).toEqual({
+      wordCount: 78,
+      charCount: 560,
+      sentenceCount: 14,
+      paragraphCount: 7,
+      searchFrequency: 2,
+      readingTime: {
+        minutes: 0,
+        seconds: 19,
+        total: 19,
+        text: 'less than a minute read',
+      },
+      mostFrequentWord: 'paragraph',
+      leastFrequentWord: 'first',
+      mostFrequentCharacter: 'a',
+      leastFrequentCharacter: '!',
+    });
+  });
 });
