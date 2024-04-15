@@ -23,12 +23,17 @@ describe('useTextAnalyzer', () => {
     const { result } = renderHook(() => useTextAnalyzer({ text: text.trim(), searchTerm: 'SeCoNd', ignoreCase: true }));
 
     expect(result.current).toEqual({
-      wordCount: 80,
+      wordCount: 78,
       charCount: 560,
       sentenceCount: 14,
       paragraphCount: 7,
       searchFrequency: 2,
-      readingTime: 24,
+      readingTime: {
+        minutes: 0,
+        seconds: 19,
+        total: 19,
+        text: 'less than a minute read',
+      },
       mostFrequentWord: 'paragraph',
       leastFrequentWord: 'first',
       mostFrequentCharacter: 'a',
@@ -46,12 +51,17 @@ describe('useTextAnalyzer', () => {
     );
 
     expect(result.current).toEqual({
-      wordCount: 80,
+      wordCount: 78,
       charCount: 560,
       sentenceCount: 14,
       paragraphCount: 7,
       searchFrequency: 1,
-      readingTime: 24,
+      readingTime: {
+        minutes: 0,
+        seconds: 19,
+        total: 19,
+        text: 'less than a minute read',
+      },
       mostFrequentWord: 'This',
       leastFrequentWord: 'first',
       mostFrequentCharacter: 'a',
@@ -63,12 +73,17 @@ describe('useTextAnalyzer', () => {
     const { result } = renderHook(() => useTextAnalyzer({ text, trimText: false }));
 
     expect(result.current).toEqual({
-      wordCount: 80,
+      wordCount: 78,
       charCount: 566,
       sentenceCount: 14,
       paragraphCount: 7,
       searchFrequency: 0,
-      readingTime: 24,
+      readingTime: {
+        minutes: 0,
+        seconds: 19,
+        total: 19,
+        text: 'less than a minute read',
+      },
       mostFrequentWord: 'paragraph',
       leastFrequentWord: 'first',
       mostFrequentCharacter: 'a',
@@ -86,12 +101,17 @@ describe('useTextAnalyzer', () => {
     );
 
     expect(result.current).toEqual({
-      wordCount: 80,
+      wordCount: 78,
       charCount: 560,
       sentenceCount: 14,
       paragraphCount: 7,
       searchFrequency: 1,
-      readingTime: 24,
+      readingTime: {
+        minutes: 0,
+        seconds: 19,
+        total: 19,
+        text: 'less than a minute read',
+      },
       mostFrequentWord: 'paragraph',
       leastFrequentWord: 'first',
       mostFrequentCharacter: 'a',

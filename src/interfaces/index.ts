@@ -20,6 +20,11 @@ export interface TextAnalyzerOptions {
    * @default true
    */
   trimText?: boolean;
+  /**
+   * The number of words a person can read per minute.
+   * @default 250
+   */
+  wordsPerMinute?: number;
 }
 
 /**
@@ -47,9 +52,26 @@ export interface TextAnalysisResult {
    */
   searchFrequency: number;
   /**
-   * The estimated reading time of the text in seconds.
+   * The estimated reading time of the text, detailed in minutes and seconds.
    */
-  readingTime: number;
+  readingTime: {
+    /**
+     * Estimated minutes to read the text.
+     */
+    minutes: number;
+    /**
+     * Remaining seconds beyond counted minutes.
+     */
+    seconds: number;
+    /**
+     * Total estimated reading time in seconds.
+     */
+    total: number;
+    /**
+     * Human-readable summary of the reading time.
+     */
+    text: string;
+  };
   /**
    * The most frequent word in the text.
    */

@@ -4,5 +4,5 @@
  * @returns {string[]} An array containing the words extracted from the text.
  */
 export function splitWords(text: string) {
-  return text.split(/[\s\W]+/).filter(Boolean);
+  return text.match(/[\w']+(?:'\w+)*/g) || [];
 }

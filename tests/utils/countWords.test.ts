@@ -28,4 +28,10 @@ describe('countWords', () => {
   it('should handle words containing digits', () => {
     expect(countWords('This sentence contains numbers like 123 and 456.')).toBe(8);
   });
+
+  it('should handle contractions as single words', () => {
+    expect(countWords("don't count this as two words")).toBe(6);
+    expect(countWords("it's a beautiful day, isn't it?")).toBe(6);
+    expect(countWords("it'''''s a trap!")).toBe(3);
+  });
 });
