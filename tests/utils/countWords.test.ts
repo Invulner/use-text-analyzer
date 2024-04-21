@@ -34,4 +34,11 @@ describe('countWords', () => {
     expect(countWords("it's a beautiful day, isn't it?")).toBe(6);
     expect(countWords("it'''''s a trap!")).toBe(3);
   });
+
+  it('should correctly count words in CJK text', () => {
+    expect(countWords('这是中文')).toBe(4);
+    expect(countWords('这是中文')).toBe(4);
+    expect(countWords('これはテストです')).toBe(8);
+    expect(countWords('테스트입니다')).toBe(6);
+  });
 });

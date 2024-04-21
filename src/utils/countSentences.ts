@@ -6,6 +6,6 @@
 export function countSentences(text: string): number {
   return text
     .trim()
-    .split(/[.!?]+/)
+    .split(/[.!?。！？]+/)
     .filter(Boolean).length;
 }

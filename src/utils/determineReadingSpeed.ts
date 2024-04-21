@@ -1,4 +1,4 @@
-import { containsCJK } from './containsCJK';
+import { containsCJK } from './common/containsCJK';
 
 import { WORDS_PER_MINUTE, CJK_WORDS_PER_MINUTE } from '../constants';
 

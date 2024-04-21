@@ -1,4 +1,4 @@
-import { containsCJK } from '../../src/utils/containsCJK';
+import { containsCJK } from '../../src/utils/common/containsCJK';
 
 describe('containsCJK', () => {
   it('returns true for strings containing Chinese characters', () => {
