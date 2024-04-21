@@ -1,3 +1,20 @@
+## 2.1.0
+
+### Enhancements
+
+- **CJK Support Enhancements:** Improved support for CJK text in various utilities:
+  - Added automatic detection of CJK text to adjust reading time calculations based on the typical reading speed for CJK languages.
+  - Updated `countWords` utility to correctly treat each CJK character as a separate word, enhancing accuracy in word counting for Chinese, Japanese, and Korean texts.
+  - Enhanced `countSentences` to recognize CJK-specific punctuation, improving sentence detection accuracy in CJK languages.
+
+### Dependency Updates
+
+- Updated `typescript` from `5.2.2` to `5.4.5`.
+- Updated `@types/react` from `18.2.73` to `18.2.79`.
+- Updated `@types/react-dom` from `18.2.23` to `18.2.25`.
+- Updated `@typescript-eslint/eslint-plugin` from `7.4.0` to `7.7.0`.
+- Updated `@typescript-eslint/parser` from `7.4.0` to `7.7.0`.
+
 ## 2.0.1
 
 ### Fixes

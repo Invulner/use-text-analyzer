@@ -34,7 +34,7 @@ yarn add use-text-analyzer
 - **Advanced Reading Time Estimation 🕒:** Provides detailed reading time estimates in minutes and seconds, along with a human-readable format for immediate use in interfaces.
 - **Efficient Algorithms ⚡:** Utilizes efficient algorithms for finding the most and least frequent words/
   characters.
-- **CJK Support 🌏:** Automatically adjusts reading time calculations for texts containing Chinese, Japanese, or Korean characters.
+- **CJK Support 🌏:** Enhanced support for texts in Chinese, Japanese, and Korean, ensuring accurate analysis across these languages.
 
 ## Usage 📝
 
