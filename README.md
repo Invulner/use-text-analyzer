@@ -34,6 +34,7 @@ yarn add use-text-analyzer
 - **Advanced Reading Time Estimation 🕒:** Provides detailed reading time estimates in minutes and seconds, along with a human-readable format for immediate use in interfaces.
 - **Efficient Algorithms ⚡:** Utilizes efficient algorithms for finding the most and least frequent words/
   characters.
+- **CJK Support 🌏:** Automatically adjusts reading time calculations for texts containing Chinese, Japanese, or Korean characters.
 
 ## Usage 📝
 
@@ -98,7 +99,7 @@ A React hook that analyzes the given text and returns various statistics about i
   - `searchTerm` (string, optional): The term to search for in the text.
   - `ignoreCase` (boolean, optional, default: true): Whether to ignore case when searching for the term and calculating word and character frequencies.
   - `trimText` (boolean, optional, default: true): Whether to trim the text before analysis.
-  - `wordsPerMinute` (number, optional, default: 250): Custom reading speed in words per minute.
+  - `wordsPerMinute` (number, optional, default: 250 or 500 for CJK): Custom reading speed in words per minute, automatically adjusted for CJK text if not specified.
 
 #### Returns
 

@@ -4,3 +4,5 @@
 // Users can adjust this setting to match their reading speed or the specific
 // requirements of different text types.
 export const WORDS_PER_MINUTE = 250;
+
+export const CJK_WORDS_PER_MINUTE = 500;
