@@ -29,12 +29,12 @@ yarn add use-text-analyzer
 
 ## Features ✨
 
-- **Lightweight 🪶:** Less than 1KB in size, making it lightweight and efficient.
+- **Lightweight 🪶:** 1KB in size, making it lightweight and efficient.
 - **TypeScript Support 🇹🇸:** Works seamlessly with both JavaScript and TypeScript projects.
 - **Advanced Reading Time Estimation 🕒:** Provides detailed reading time estimates in minutes and seconds, along with a human-readable format for immediate use in interfaces.
-- **Efficient Algorithms ⚡:** Utilizes efficient algorithms for finding the most and least frequent words/
-  characters.
-- **CJK Support 🌏:** Enhanced support for texts in Chinese, Japanese, and Korean, ensuring accurate analysis across these languages.
+- **Efficient Algorithms ⚡:** Utilizes efficient algorithms for finding the most and least frequent words/characters.
+- **CJK Support 📜:** Enhanced support for texts in Chinese, Japanese, and Korean, ensuring accurate analysis across these languages.
+- **SSR Compatible 🌐:** Fully compatible with server-side rendering, ensuring reliable performance across server and client environments.
 
 ## Usage 📝
 
