@@ -16,8 +16,13 @@ function useTextAnalyzer({
   trimText = true,
   wordsPerMinute,
 }: TextAnalyzerOptions): TextAnalysisResult {
-  const processedText = trimText ? text.trim() : text;
-  const effectiveWPM = determineReadingSpeed(processedText, wordsPerMinute);
+  const processedText = useMemo(() => {
+    return trimText ? text.trim() : text;
+  }, [text, trimText]);
+
+  const effectiveWPM = useMemo(() => {
+    return determineReadingSpeed(processedText, wordsPerMinute);
+  }, [processedText, wordsPerMinute]);
 
   const analysisResult = useMemo(() => {
     return calculateStats({
