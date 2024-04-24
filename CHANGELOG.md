@@ -1,3 +1,18 @@
+## 2.1.1
+
+### Enhancements
+
+- **Optimizations:** Enhanced the performance of the `useTextAnalyzer` hook by wrapping several calculations in `useMemo` to avoid unnecessary re-computations.
+
+### Documentation
+
+- Updated README to clarify features.
+
+### Dependency Updates
+
+- Updated `@typescript-eslint/eslint-plugin` from `7.7.0` to `7.7.1`.
+- Updated `@typescript-eslint/parser` from `7.7.0` to `7.7.1`.
+
 ## 2.1.0
 
 ### Enhancements
