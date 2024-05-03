@@ -1,6 +1,6 @@
 {
   "name": "use-text-analyzer",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "A React hook for analyzing text.",
   "source": "src/index.ts",
   "main": "dist/index.js",

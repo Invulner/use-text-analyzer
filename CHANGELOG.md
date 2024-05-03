@@ -1,3 +1,14 @@
+## 2.1.2
+
+### Dependency Updates
+
+- Bump `ejs` from version `3.1.9` to `3.1.10` in the npm_and_yarn group.
+- Bump `@typescript-eslint/parser` from version `7.7.1` to `7.8.0`.
+- Bump `eslint-plugin-react-hooks` from version `4.6.0` to `4.6.2`.
+- Bump `@typescript-eslint/eslint-plugin` from version `7.7.1` to `7.8.0`.
+- Updates `react` from version `18.2.0` to `18.3.1`.
+- Updates `@types/react` from version `18.2.79` to `18.3.1`.
+
 ## 2.1.1
 
 ### Enhancements
