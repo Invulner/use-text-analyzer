@@ -29,11 +29,12 @@ yarn add use-text-analyzer
 
 ## Features ✨
 
-- **Lightweight 🪶:** Less than 1KB in size, making it lightweight and efficient.
+- **Lightweight 🪶:** 1KB in size, making it lightweight and efficient.
 - **TypeScript Support 🇹🇸:** Works seamlessly with both JavaScript and TypeScript projects.
 - **Advanced Reading Time Estimation 🕒:** Provides detailed reading time estimates in minutes and seconds, along with a human-readable format for immediate use in interfaces.
-- **Efficient Algorithms ⚡:** Utilizes efficient algorithms for finding the most and least frequent words/
-  characters.
+- **Efficient Algorithms ⚡:** Utilizes efficient algorithms for finding the most and least frequent words/characters.
+- **CJK Support 📜:** Enhanced support for texts in Chinese, Japanese, and Korean, ensuring accurate analysis across these languages.
+- **SSR Compatible 🌐:** Fully compatible with server-side rendering, ensuring reliable performance across server and client environments.
 
 ## Usage 📝
 
@@ -98,7 +99,7 @@ A React hook that analyzes the given text and returns various statistics about i
   - `searchTerm` (string, optional): The term to search for in the text.
   - `ignoreCase` (boolean, optional, default: true): Whether to ignore case when searching for the term and calculating word and character frequencies.
   - `trimText` (boolean, optional, default: true): Whether to trim the text before analysis.
-  - `wordsPerMinute` (number, optional, default: 250): Custom reading speed in words per minute.
+  - `wordsPerMinute` (number, optional, default: 250 or 500 for CJK): Custom reading speed in words per minute, automatically adjusted for CJK text if not specified.
 
 #### Returns
 

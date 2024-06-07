@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 
 import { TextAnalysisResult, TextAnalyzerOptions } from './interfaces';
+import { determineReadingSpeed } from './utils/determineReadingSpeed';
 import { calculateStats } from './utils/calculateStats';
-import { WORDS_PER_MINUTE } from './constants';
 
 /**
  * Analyzes the given text and returns various statistics about it.
@@ -14,19 +14,24 @@ function useTextAnalyzer({
   searchTerm = '',
   ignoreCase = true,
   trimText = true,
-  wordsPerMinute = WORDS_PER_MINUTE,
+  wordsPerMinute,
 }: TextAnalyzerOptions): TextAnalysisResult {
-  const processedText = trimText ? text.trim() : text;
-  const validWPM = Number(wordsPerMinute) || WORDS_PER_MINUTE;
+  const processedText = useMemo(() => {
+    return trimText ? text.trim() : text;
+  }, [text, trimText]);
+
+  const effectiveWPM = useMemo(() => {
+    return determineReadingSpeed(processedText, wordsPerMinute);
+  }, [processedText, wordsPerMinute]);
 
   const analysisResult = useMemo(() => {
     return calculateStats({
       text: processedText,
       searchTerm,
       ignoreCase,
-      wordsPerMinute: validWPM,
+      wordsPerMinute: effectiveWPM,
     });
-  }, [processedText, searchTerm, ignoreCase, validWPM]);
+  }, [processedText, searchTerm, ignoreCase, effectiveWPM]);
 
   return analysisResult;
 }

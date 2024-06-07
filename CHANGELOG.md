@@ -1,3 +1,58 @@
+## 2.1.3
+
+### Dependency Updates
+
+- Updated `react-dom` from `18.2.0` to `18.3.1`.
+- Updated `@types/react-dom` from `18.2.25` to `18.3.0`.
+- Updated `@typescript-eslint/parser` from `7.8.0` to `7.12.0`.
+- Updated `@types/react` from `18.3.1` to `18.3.3`.
+- Updated `@typescript-eslint/eslint-plugin` from `7.8.0` to `7.12.0`.
+- Updated `ts-jest` from `29.1.2` to `29.1.4`.
+- Updated `prettier` from `3.2.5` to `3.3.0`.
+
+## 2.1.2
+
+### Dependency Updates
+
+- Bump `ejs` from version `3.1.9` to `3.1.10` in the npm_and_yarn group.
+- Bump `@typescript-eslint/parser` from version `7.7.1` to `7.8.0`.
+- Bump `eslint-plugin-react-hooks` from version `4.6.0` to `4.6.2`.
+- Bump `@typescript-eslint/eslint-plugin` from version `7.7.1` to `7.8.0`.
+- Updates `react` from version `18.2.0` to `18.3.1`.
+- Updates `@types/react` from version `18.2.79` to `18.3.1`.
+
+## 2.1.1
+
+### Enhancements
+
+- **Optimizations:** Enhanced the performance of the `useTextAnalyzer` hook by wrapping several calculations in `useMemo` to avoid unnecessary re-computations.
+
+### Documentation
+
+- Updated README to clarify features.
+
+### Dependency Updates
+
+- Updated `@typescript-eslint/eslint-plugin` from `7.7.0` to `7.7.1`.
+- Updated `@typescript-eslint/parser` from `7.7.0` to `7.7.1`.
+
+## 2.1.0
+
+### Enhancements
+
+- **CJK Support Enhancements:** Improved support for CJK text in various utilities:
+  - Added automatic detection of CJK text to adjust reading time calculations based on the typical reading speed for CJK languages.
+  - Updated `countWords` utility to correctly treat each CJK character as a separate word, enhancing accuracy in word counting for Chinese, Japanese, and Korean texts.
+  - Enhanced `countSentences` to recognize CJK-specific punctuation, improving sentence detection accuracy in CJK languages.
+
+### Dependency Updates
+
+- Updated `typescript` from `5.2.2` to `5.4.5`.
+- Updated `@types/react` from `18.2.73` to `18.2.79`.
+- Updated `@types/react-dom` from `18.2.23` to `18.2.25`.
+- Updated `@typescript-eslint/eslint-plugin` from `7.4.0` to `7.7.0`.
+- Updated `@typescript-eslint/parser` from `7.4.0` to `7.7.0`.
+
 ## 2.0.1
 
 ### Fixes

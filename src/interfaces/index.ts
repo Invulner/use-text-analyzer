@@ -22,7 +22,7 @@ export interface TextAnalyzerOptions {
   trimText?: boolean;
   /**
    * The number of words a person can read per minute.
-   * @default 250
+   * @default 250 or 500 for CJK characters
    */
   wordsPerMinute?: number;
 }
