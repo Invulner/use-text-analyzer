@@ -1,3 +1,15 @@
+## 2.1.3
+
+### Dependency Updates
+
+- Updated `react-dom` from `18.2.0` to `18.3.1`.
+- Updated `@types/react-dom` from `18.2.25` to `18.3.0`.
+- Updated `@typescript-eslint/parser` from `7.8.0` to `7.12.0`.
+- Updated `@types/react` from `18.3.1` to `18.3.3`.
+- Updated `@typescript-eslint/eslint-plugin` from `7.8.0` to `7.12.0`.
+- Updated `ts-jest` from `29.1.2` to `29.1.4`.
+- Updated `prettier` from `3.2.5` to `3.3.0`.
+
 ## 2.1.2
 
 ### Dependency Updates
