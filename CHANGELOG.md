@@ -1,3 +1,14 @@
+## 2.1.4
+
+### Dependency Updates
+
+- Updated `husky` from `9.0.11` to `9.1.4`.
+- Updated `prettier` from `3.3.0` to `3.3.3`.
+- Updated `@typescript-eslint/parser` from `7.12.0` to `7.18.0`.
+- Updated `@typescript-eslint/eslint-plugin` from `7.12.0` to `7.18.0`.
+- Updated `ts-jest` from `29.1.4` to `29.2.3`.
+- Updated `typescript` from `5.4.5` to `5.5.3`.
+
 ## 2.1.3
 
 ### Dependency Updates
