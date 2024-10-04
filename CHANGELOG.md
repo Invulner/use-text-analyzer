@@ -1,3 +1,11 @@
+## 2.1.6
+
+### Fixes
+
+- Resolved deprecation warnings in the test suite by installing additional testing libraries:
+  - Added `@testing-library/dom` version `^10.4.0`.
+  - Added `@testing-library/react` version `^16.0.1`.
+
 ## 2.1.5
 
 ### Dependency Updates
