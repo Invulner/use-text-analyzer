@@ -1,3 +1,13 @@
+## 2.1.5
+
+### Dependency Updates
+
+- Updated `@types/react` from `18.3.3` to `18.3.10`.
+- Updated `eslint-plugin-prettier` from `5.1.3` to `5.2.1`.
+- Updated `husky` from `9.1.4` to `9.1.6`.
+- Updated `ts-jest` from `29.2.3` to `29.2.5`.
+- Updated `typescript` from `5.5.3` to `5.6.2`.
+
 ## 2.1.4
 
 ### Dependency Updates
